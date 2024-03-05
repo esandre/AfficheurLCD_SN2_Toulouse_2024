@@ -1,17 +1,21 @@
 ﻿using System.Text;
 
-string Print1()
+string Print1(uint sizeX = 1)
 {
-    return "   " + Environment.NewLine +
-           "  |" + Environment.NewLine +
-           "  |";
+    var spaces = new string(' ', (int) sizeX + 2);
+
+    return spaces + " " + Environment.NewLine +
+           spaces + "|" + Environment.NewLine +
+           spaces + "|";
 }
 
-string Print2()
+string Print2(uint sizeX = 1)
 {
-    return  " _ " + Environment.NewLine +
-            " _|" + Environment.NewLine +
-            "|_ ";
+    var underscores = new string('_', (int) sizeX);
+
+    return  " " + underscores + " " + Environment.NewLine +
+            " " + underscores + "|" + Environment.NewLine +
+            "|" + underscores + " ";
 }
 
 string Concat(string a, string b)
@@ -34,20 +38,21 @@ string Concat(string a, string b)
     return builder.ToString();
 }
 
-string Print(uint nb)
+string Print(uint nb, uint sizeX = 1)
 {
     switch (nb)
     {
         case 1:
-            return Print1();
+            return Print1(sizeX);
         case 2:
-            return Print2();
+            return Print2(sizeX);
         default:
             return Concat(
-                Print(nb / 10),
-                Print(nb % 10)
+                Print(nb / 10, sizeX),
+                Print(nb % 10, sizeX)
             );
     }
 }
 
 Console.WriteLine(Print(12111));
+Console.WriteLine(Print(12111, 2));
