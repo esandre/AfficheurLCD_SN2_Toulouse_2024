@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace AfficheurLCD.Test
 {
     public class AffichageTest
@@ -21,6 +23,28 @@ namespace AfficheurLCD.Test
         public void TestChiffre(int n, string attendu)
         {
             Assert.Equal(attendu, n.AsLCD());
+        }
+
+        [Fact]
+        public void CentOnze_Horizontal()
+        {
+            var attendu =
+                "           " + Environment.NewLine +
+                "  |   |   |" + Environment.NewLine +
+                "  |   |   |" + Environment.NewLine;
+
+            Assert.Equal(attendu, 111.AsLCD());
+        }
+
+        [Fact]
+        public void Onze_Horizontal()
+        {
+            var attendu =
+                "       " + Environment.NewLine +
+                "  |   |" + Environment.NewLine +
+                "  |   |" + Environment.NewLine;
+
+            Assert.Equal(attendu, 11.AsLCD());
         }
     }
 }
