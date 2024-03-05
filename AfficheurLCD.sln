@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfficheurLCD", "AfficheurLCD\AfficheurLCD.csproj", "{B2088160-F07C-4B2B-9BDC-4E2FCF76B185}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfficheurLCD.Test", "AfficheurLCD.Test\AfficheurLCD.Test.csproj", "{C8E3736C-7B88-46E7-BF4C-662011522B7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B2088160-F07C-4B2B-9BDC-4E2FCF76B185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2088160-F07C-4B2B-9BDC-4E2FCF76B185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2088160-F07C-4B2B-9BDC-4E2FCF76B185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E3736C-7B88-46E7-BF4C-662011522B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E3736C-7B88-46E7-BF4C-662011522B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E3736C-7B88-46E7-BF4C-662011522B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E3736C-7B88-46E7-BF4C-662011522B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
